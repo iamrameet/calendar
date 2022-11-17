@@ -1,0 +1,52 @@
+*{margin: 0px; padding: 0px; box-sizing: border-box;}
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.calendar{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1em;
+  /* background-color: #0001; */
+}
+
+.calendar .caption{
+  padding: 0.5em;
+  width: 100%;
+  font-size: x-large;
+  text-align: center;
+}
+
+.calendar table{
+  float: left;
+  margin: 1em;
+  border-collapse: collapse;
+  /* border: 1px solid #eee; */
+}
+
+.calendar table caption{
+  line-height: 3em;
+  font-size: large;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.calendar table tr>:is(th, td){
+  display: table-cell;
+  width: 3em;
+  height: 3em;
+  text-align: center;
+}
+.calendar table tr>:is(th, td):first-child{
+  color: red;
+}
+
+.calendar table tr>td[today]{
+  font-weight: bold;
+  background-color: #eee;
+}
+
+.calendar table tr>td:not(:empty):hover{
+  background-color: #ddd;
+}
